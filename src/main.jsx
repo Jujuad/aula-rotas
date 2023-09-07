@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import EditarProdutos from './routes/EditarProdutos/index.jsx';
 import Error from './routes/Error/index.jsx';
 import Home from './routes/Home/index.jsx';
@@ -15,8 +15,9 @@ const router = createBrowserRouter([
         { path: '/', element: <Home /> },
         { path: '/produtos', element: <Produtos /> },
         { path: '/produtos/editar/:id', element: <EditarProdutos /> },
+        { path: "/antiga", element: <Navigate to="/"/>}
       ]
-  },
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
