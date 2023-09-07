@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { listaProdutos } from "../../data/listarProdutos";
+import { listaProdutos } from "../../components/listarProdutos";
 
 export default function EditarProduto(){
 
@@ -11,7 +11,7 @@ export default function EditarProduto(){
     const produto = proc[0]
 
     const salvar = ()=>{
-        alert('Produto: ${produto.nome} editado com sucesso!')
+        alert(`Produto: ${produto.nome} editado com sucesso!`)
         return navegacao('/produtos')
     }
 
